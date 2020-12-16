@@ -1,0 +1,22 @@
+﻿@model TechnicalCodeInterview.DataLibrary.Models.EmployeeModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete Employee</h1>
+
+@if (Model is null)
+{
+    <h4>The requested record was not found.</h4>
+}
+else
+{
+    <div class="h4">
+        Are you sure you want to delete @Model.FirstName @Model.MiddleName @Model.LastName?
+    </div>
+    <form asp-action="Delete">
+        <input type="submit" value="Delete" class="btn btn-danger" />
+    </form>
+
+}

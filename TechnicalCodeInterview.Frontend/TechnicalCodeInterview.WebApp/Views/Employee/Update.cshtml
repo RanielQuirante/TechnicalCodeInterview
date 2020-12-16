@@ -1,0 +1,41 @@
+﻿@model TechnicalCodeInterview.WebApp.Models.EmployeeCreateModel
+
+@{
+    ViewData["Title"] = "Update";
+}
+
+<h1>Update Employee Details</h1>
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Update">
+            <input name="id" value="@Model.Employee.Id" type="hidden" />
+            <div class="form-group">
+                <label class="control-label">First Name</label>
+                <input name="firstName" value="@Model.Employee.FirstName" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label class="control-label">Middle Name</label>
+                <input name="middleName" value="@Model.Employee.MiddleName" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label class="control-label">Last Name</label>
+                <input name="lastName" value="@Model.Employee.LastName" class="form-control" />
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Update Employee Details" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+@*<div>
+    <h4>EmployeeCreateModel</h4>
+    <hr />
+    <dl class="row">
+    </dl>
+</div>
+<div>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    <a asp-action="Index">Back to List</a>
+</div>*@
